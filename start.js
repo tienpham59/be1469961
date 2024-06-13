@@ -5,7 +5,7 @@ const { query } = require("./data.js");
 
 app.use(express.json());
 
-app.post("/api/books", async (req, res) => {
+app.post("/api1469961/books", async (req, res) => {
   const { title, author } = req.body;
   console.info(`Adding book with title ${title} by author ${author}`);
 
@@ -17,7 +17,7 @@ app.post("/api/books", async (req, res) => {
   res.json({ id: result[0].id });
 });
 
-app.get("/api/books", async (req, res) => {
+app.get("/api1469961/books", async (req, res) => {
   console.info(`Getting all books`);
 
   const books = await query("SELECT * FROM tblbook");
